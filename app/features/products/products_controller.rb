@@ -16,5 +16,19 @@ module Products
         data: product
       }
     end
+
+    def create
+      name = params[:name]
+      description = params[:description]
+      price = params[:price]
+
+      result = @service.create_product(name: name, description: description, price: price)
+
+      render json: {
+        transactionId: SecureRandom.uuid,
+        message: 'Product created successfully',
+        data: result
+      }
+    end
   end
 end
