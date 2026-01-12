@@ -78,6 +78,7 @@ GEM
     ast (2.4.3)
     base64 (0.3.0)
     bigdecimal (4.0.1)
+    bson (5.2.0)
     builder (3.3.0)
     concurrent-ruby (1.3.6)
     connection_pool (3.0.2)
@@ -115,6 +116,9 @@ GEM
     mini_mime (1.1.5)
     minitest (6.0.1)
       prism (~> 1.5)
+    mongo (2.22.0)
+      base64
+      bson (>= 4.14.1, < 6.0.0)
     net-imap (0.6.2)
       date
       net-protocol
@@ -266,6 +270,7 @@ PLATFORMS
 
 DEPENDENCIES
   debug
+  mongo
   puma (>= 5.0)
   rails (~> 8.1.2)
   rubocop
