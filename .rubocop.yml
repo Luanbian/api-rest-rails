@@ -1,0 +1,27 @@
+# YAML
+require:
+  - rubocop-rails
+  - rubocop-performance
+
+AllCops:
+  Exclude:
+    - 'db/schema.rb'
+    - 'bin/*'
+    - 'tmp/**'
+    - 'vendor/**'
+  NewCops: enable
+
+Layout/LineLength:
+  Max: 120
+
+Metrics/BlockLength:
+  ExcludedMethods: ['describe', 'context']
+
+Rails:
+  Enabled: true
+
+# Ajustes comuns
+Style/FrozenStringLiteralComment:
+  Enabled: true
+Style/Documentation:
+  Enabled: false

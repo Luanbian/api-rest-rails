@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  get "/health", to: "health#show"
+  scope module: :products do
+    get '/products/:id', to: 'products#show'
+  end
 end
