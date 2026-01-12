@@ -1,0 +1,11 @@
+# frozen_string_literal: true
+module Products
+  module Domain
+    module IProductEntity
+      def _id: () -> String
+      def name: () -> String
+      def description: () -> String?
+      def price: () -> Integer
+    end
+  end
+end

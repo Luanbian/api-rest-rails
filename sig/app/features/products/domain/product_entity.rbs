@@ -1,0 +1,16 @@
+# frozen_string_literal: true
+
+module Products
+  module Domain
+    class ProductEntity include IProductEntity
+      @_id: String
+      @name: String
+      @description: String?
+      @price: Integer
+
+      private def initialize: (data: IProductEntity) -> void
+      def self.build: (data: IProductEntity) -> ProductEntity
+
+    end
+  end
+end
